@@ -1,6 +1,5 @@
 package server
 
-
 import (
 	"bufio"
 	"fmt"
@@ -9,8 +8,8 @@ import (
 )
 
 type Config struct {
-	Host     string
-	Port  string
+	Host string
+	Port string
 }
 
 func handleConnection(conn net.Conn) {
@@ -35,7 +34,6 @@ func handleConnection(conn net.Conn) {
 	log.Printf("Closing connection with %s", conn.RemoteAddr())
 
 }
-
 
 func Start(conf Config) {
 	l, err := net.Listen("tcp", conf.Host+":"+conf.Port)

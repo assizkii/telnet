@@ -2,9 +2,9 @@ package cmd
 
 import (
 	"flag"
-	"log"
 	"github.com/assizkii/telnet/internal/client"
 	"github.com/assizkii/telnet/internal/server"
+	"log"
 	"time"
 )
 
@@ -12,12 +12,12 @@ var (
 	timeoutFlag string
 )
 
-func init()  {
+func init() {
 	flag.StringVar(&timeoutFlag, "timeout", "10s", "timeout durations")
 	flag.Parse()
 }
 
-func RunNetwork()  {
+func RunNetwork() {
 
 	host := flag.Arg(0)
 	port := flag.Arg(1)
@@ -25,7 +25,7 @@ func RunNetwork()  {
 	networkType := flag.Arg(2)
 	// запускаем сервер
 	if networkType == "server" {
-		server.Start(server.Config{Host:host, Port:port})
+		server.Start(server.Config{Host: host, Port: port})
 	} else {
 		timeout, err := time.ParseDuration(timeoutFlag)
 		if err != nil {

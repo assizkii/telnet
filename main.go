@@ -4,8 +4,6 @@ import (
 	"telnet/cmd"
 )
 
-func main()  {
-
+func main() {
 	cmd.RunNetwork()
-
 }
