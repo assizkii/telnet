@@ -1,7 +1,7 @@
 package main
 
 import (
-	"telnet/cmd"
+	"github.com/assizkii/telnet/cmd"
 )
 
 func main() {
